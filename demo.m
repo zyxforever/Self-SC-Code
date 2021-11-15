@@ -1,16 +1,18 @@
-load('data_MNIST10k.mat');
-t=20;
-o=20;
-kk=10;
-m=30;
+load("data/data_MNIST10k.mat");
 X=data;Y=labels;
-k=length(unique(Y));
-X=Normalized_data(X);        
+
+o=20;
+t=20;
+beta=1;
+lambda=0.1;
+kk=10;
+m=90;
 [n,~]=size(X);
+k=length(unique(Y));
 p=min(10*k,n);
-[W,delta]=Computation_SelfSC_W(X,kk,m);
- Label=script_lp(W,Y,o,t,p,1);
- [~,ACC,~,~,ARI,NMI]=accuray_measures(Label,Y);
- disp(ACC);
- disp(ARI);
- disp(NMI);
+
+X=Normalized_data(X);
+[W,Dis,delta]=Computation_SelfSC_W(X,kk,m);
+
+Label=script_lp(W,Y,o,t,p,beta,lambda);
+[~,acc,~,~,ari,nmi]=accuray_measures(Label,Y);
