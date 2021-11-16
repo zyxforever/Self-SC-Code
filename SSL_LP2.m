@@ -16,11 +16,14 @@ S=randperm(n);
 p=min(p,n);
 Y=Q(:,S(1:p));
 A=[];
+k1=0;
 for i=1:o
+    De=exp(-k1);
     %cur_lambda=exp(-i);
     [~,V]=LP3(W,Y,beta,t);
     V=bsxfun(@rdivide, V, sqrt(sum(V.^2, 2))+eps);
-    Y=Y+V*lambda;
+    %Y=Y+V*lambda;
+    Y=Y+V*De;
     A=V;
 end
 [Label,~,~,DD]= kmeans(A, k, 'EmptyAction', 'singleton','Replicates',10);

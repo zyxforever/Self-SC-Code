@@ -4,7 +4,7 @@ t=20;
 beta=0.99;
 lambda=0.1;
 kk=10;
-m=50;
+m=90;
 X=data;Y=labels;
 [n,~]=size(X);
 k=length(unique(Y));
