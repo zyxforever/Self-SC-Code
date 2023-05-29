@@ -1,6 +1,8 @@
 # Self-supervised spectral clustering with exemplar constraints
 
-
+## Demo for Codes
+codes for paper "Self-supervised spectral clustering with exemplar constraints"
+run demo.m 
 ## Citation
 If you use this code for your research, please cite:
 ```
@@ -16,5 +18,3 @@ If you use this code for your research, please cite:
 }
 ```
 
-codes for paper "Self-supervised spectral clustering with exemplar constraints"
-run demo.m 
