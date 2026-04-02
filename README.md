@@ -11,7 +11,7 @@ If you use this code for your research, please cite:
                   Yunxiao Zhao and
                   Jiye Liang},
   title        = {Self-supervised spectral clustering with exemplar constraints},
-  journal      = {Pattern Recognit.},
+  journal      = {Pattern Recognition},
   volume       = {132},
   pages        = {108975},
   year         = {2022}
